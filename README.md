@@ -37,7 +37,7 @@ Finally add this to the Gemfile:
 This is the preferred method to install the Dyspatch API Client.
 
 ```shell
-gem install dyspatch-ruby
+gem install dyspatch_client
 ```
 
 ### Install from Git
