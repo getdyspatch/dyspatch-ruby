@@ -32,7 +32,7 @@ localization_id = "localization_id_example" # String | A localization ID
 
 opts = { 
   target_language: "target_language_example", # String | The type of templating language to compile as. Should only be used for visual templates.
-  accept: "accept_example" # String | A version of the API that should be used for the request. For example, to use version \"2019.03\", set the value to \"application/vnd.dyspatch.2019.03+json\"
+  accept: "accept_example" # String | A version of the API that should be used for the request. For example, to use version "2019.03", set the value to "application/vnd.dyspatch.2019.03+json"
 }
 
 begin
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **localization_id** | **String**| A localization ID | 
  **target_language** | **String**| The type of templating language to compile as. Should only be used for visual templates. | [optional] 
- **accept** | **String**| A version of the API that should be used for the request. For example, to use version \&quot;2019.03\&quot;, set the value to \&quot;application/vnd.dyspatch.2019.03+json\&quot; | [optional] 
+ **accept** | **String**| A version of the API that should be used for the request. For example, to use version "2019.03", set the value to "application/vnd.dyspatch.2019.03+json" | [optional] 
 
 ### Return type
 

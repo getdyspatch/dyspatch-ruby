@@ -25,7 +25,7 @@ module DyspatchClient
     # @param localization_id A localization ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :target_language The type of templating language to compile as. Should only be used for visual templates.
-    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version \&quot;2019.03\&quot;, set the value to \&quot;application/vnd.dyspatch.2019.03+json\&quot;
+    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version "2019.03", set the value to "application/vnd.dyspatch.2019.03+json"
     # @return [LocalizationRead]
     def localizations_localization_id_get(localization_id, opts = {})
       data, _status_code, _headers = localizations_localization_id_get_with_http_info(localization_id, opts)
@@ -37,7 +37,7 @@ module DyspatchClient
     # @param localization_id A localization ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :target_language The type of templating language to compile as. Should only be used for visual templates.
-    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version \&quot;2019.03\&quot;, set the value to \&quot;application/vnd.dyspatch.2019.03+json\&quot;
+    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version "2019.03", set the value to "application/vnd.dyspatch.2019.03+json"
     # @return [Array<(LocalizationRead, Fixnum, Hash)>] LocalizationRead data, response status code and response headers
     def localizations_localization_id_get_with_http_info(localization_id, opts = {})
       if @api_client.config.debugging

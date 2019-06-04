@@ -24,7 +24,7 @@ module DyspatchClient
     # Gets a list of Template Metadata objects for all templates. Up to 25 results returned before results are paginated.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :cursor A cursor value used to retrieve a specific page from a paginated result set.
-    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version \&quot;2019.03\&quot;, set the value to \&quot;application/vnd.dyspatch.2019.03+json\&quot;
+    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version "2019.03", set the value to "application/vnd.dyspatch.2019.03+json"
     # @return [TemplatesRead]
     def templates_get(opts = {})
       data, _status_code, _headers = templates_get_with_http_info(opts)
@@ -35,7 +35,7 @@ module DyspatchClient
     # Gets a list of Template Metadata objects for all templates. Up to 25 results returned before results are paginated.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :cursor A cursor value used to retrieve a specific page from a paginated result set.
-    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version \&quot;2019.03\&quot;, set the value to \&quot;application/vnd.dyspatch.2019.03+json\&quot;
+    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version "2019.03", set the value to "application/vnd.dyspatch.2019.03+json"
     # @return [Array<(TemplatesRead, Fixnum, Hash)>] TemplatesRead data, response status code and response headers
     def templates_get_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -74,11 +74,11 @@ module DyspatchClient
     end
 
     # Get Template by ID
-    # Gets a template object with the matching ID. If the template has published content the \"compiled\" field will contain the template .
+    # Gets a template object with the matching ID. If the template has published content the "compiled" field will contain the template .
     # @param template_id A template ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :target_language The type of templating language to compile as. Should only be used for visual templates.
-    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version \&quot;2019.03\&quot;, set the value to \&quot;application/vnd.dyspatch.2019.03+json\&quot;
+    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version "2019.03", set the value to "application/vnd.dyspatch.2019.03+json"
     # @return [TemplateRead]
     def templates_template_id_get(template_id, opts = {})
       data, _status_code, _headers = templates_template_id_get_with_http_info(template_id, opts)
@@ -86,11 +86,11 @@ module DyspatchClient
     end
 
     # Get Template by ID
-    # Gets a template object with the matching ID. If the template has published content the \&quot;compiled\&quot; field will contain the template .
+    # Gets a template object with the matching ID. If the template has published content the "compiled" field will contain the template .
     # @param template_id A template ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :target_language The type of templating language to compile as. Should only be used for visual templates.
-    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version \&quot;2019.03\&quot;, set the value to \&quot;application/vnd.dyspatch.2019.03+json\&quot;
+    # @option opts [String] :accept A version of the API that should be used for the request. For example, to use version "2019.03", set the value to "application/vnd.dyspatch.2019.03+json"
     # @return [Array<(TemplateRead, Fixnum, Hash)>] TemplateRead data, response status code and response headers
     def templates_template_id_get_with_http_info(template_id, opts = {})
       if @api_client.config.debugging
