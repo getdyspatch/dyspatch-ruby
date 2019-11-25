@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **name** | **String** | The name of a template | [optional] 
 **description** | **String** | A description of the template | [optional] 
 **url** | **String** | The API url for a specific template | [optional] 
-**localizations** | [**Array&lt;LocalizationMetaRead&gt;**](LocalizationMetaRead.md) | A list of the template&#39;s available localization objects | [optional] 
+**localizations** | [**Array<LocalizationMetaRead>**](LocalizationMetaRead.md) | A list of the template's available localization objects | [optional] 
 **created_at** | **DateTime** | The time of initial creation | [optional] 
 **updated_at** | **DateTime** | The time of last update | [optional] 
 

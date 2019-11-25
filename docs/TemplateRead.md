@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **compiled** | [**CompiledRead**](CompiledRead.md) |  | [optional] 
 **created_at** | **DateTime** | The time of initial creation | [optional] 
 **updated_at** | **DateTime** | The time of last update | [optional] 
-**localizations** | [**Array&lt;LocalizationMetaRead&gt;**](LocalizationMetaRead.md) | A list of the Template&#39;s available localizations | [optional] 
+**localizations** | [**Array<LocalizationMetaRead>**](LocalizationMetaRead.md) | A list of the Template's available localizations | [optional] 
 
 
