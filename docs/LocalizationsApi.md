@@ -8,11 +8,11 @@ Method | HTTP request | Description
 
 
 # **localizations_localization_id_get**
-> LocalizationRead localizations_localization_id_get(localization_id, opts)
+> LocalizationRead localizations_localization_id_get(localization_id, target_language)
 
 Get Localization Object by ID
 
-Returns a specific localization object with a matching ID
+Returns a specific localization object with a matching ID.
 
 ### Example
 ```ruby
@@ -28,16 +28,14 @@ end
 
 api_instance = DyspatchClient::LocalizationsApi.new
 
-localization_id = "localization_id_example" # String | A localization ID
+localization_id = 'localization_id_example' # String | A localization ID
 
-opts = { 
-  target_language: "target_language_example", # String | The type of templating language to compile as. Should only be used for visual templates.
-  accept: "accept_example" # String | A version of the API that should be used for the request. For example, to use version "2019.03", set the value to "application/vnd.dyspatch.2019.03+json"
-}
+target_language = 'target_language_example' # String | The type of templating language to compile as. Should only be used for visual templates.
+
 
 begin
   #Get Localization Object by ID
-  result = api_instance.localizations_localization_id_get(localization_id, opts)
+  result = api_instance.localizations_localization_id_get(localization_id, target_language)
   p result
 rescue DyspatchClient::ApiError => e
   puts "Exception when calling LocalizationsApi->localizations_localization_id_get: #{e}"
@@ -49,8 +47,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **localization_id** | **String**| A localization ID | 
- **target_language** | **String**| The type of templating language to compile as. Should only be used for visual templates. | [optional] 
- **accept** | **String**| A version of the API that should be used for the request. For example, to use version "2019.03", set the value to "application/vnd.dyspatch.2019.03+json" | [optional] 
+ **target_language** | **String**| The type of templating language to compile as. Should only be used for visual templates. | 
 
 ### Return type
 
@@ -63,7 +60,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/vnd.dyspatch.2019.03+json
+ - **Accept**: application/vnd.dyspatch.2019.10+json
 
 
 
