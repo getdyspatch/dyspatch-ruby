@@ -14,6 +14,14 @@ For more information, please visit [https://docs.dyspatch.io](https://docs.dyspa
 
 ## Installation
 
+### RubyGems
+
+Install from Rubygems:
+
+```shell
+gem install dyspatch_client
+```
+
 ### Build a gem
 
 To build the Ruby code into a gem:
