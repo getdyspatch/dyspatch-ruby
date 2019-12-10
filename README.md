@@ -68,8 +68,7 @@ require 'dyspatch_client'
 DyspatchClient.configure do |config|
   # Configure API key authorization: Bearer
   config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['Authorization'] = 'Bearer'
+  config.api_key_prefix['Authorization'] = 'Bearer'
 end
 
 api_instance = DyspatchClient::DraftsApi.new
@@ -80,7 +79,7 @@ target_language = 'target_language_example' # String | The type of templating la
 
 
 begin
-  #Get Draft by ID
+  # Get Draft by ID
   result = api_instance.drafts_draft_id_get(draft_id, target_language)
   p result
 rescue DyspatchClient::ApiError => e
