@@ -30,7 +30,7 @@ end
 api_instance = DyspatchClient::TemplatesApi.new
 
 opts = { 
-  cursor: 'cursor_example' # String | A cursor value used to retrieve a specific page from a paginated result set.
+  cursor: 'cursor_example', # String | A cursor value used to retrieve a specific page from a paginated result set.
 }
 
 begin

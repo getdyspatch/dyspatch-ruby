@@ -264,7 +264,7 @@ draft_id = 'draft_id_example' # String | A draft ID
 
 language_id = 'language_id_example' # String | A language ID (eg: en-US)
 
-body = DyspatchClient::Body1.new # Body1 | 
+body = DyspatchClient::Body.new # Body | 
 
 
 begin
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **draft_id** | **String**| A draft ID | 
  **language_id** | **String**| A language ID (eg: en-US) | 
- **body** | [**Body1**](Body1.md)|  | 
+ **body** | [**Body**](Body.md)|  | 
 
 ### Return type
 
@@ -432,6 +432,7 @@ end
 api_instance = DyspatchClient::DraftsApi.new
 
 opts = { 
+  cursor: 'cursor_example', # String | A cursor value used to retrieve a specific page from a paginated result set.
   status: 'status_example' # String | Filter the list of drafts by a particular status
 }
 
@@ -448,6 +449,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cursor** | **String**| A cursor value used to retrieve a specific page from a paginated result set. | [optional] 
  **status** | **String**| Filter the list of drafts by a particular status | [optional] 
 
 ### Return type
