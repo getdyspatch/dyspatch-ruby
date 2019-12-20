@@ -21,9 +21,9 @@ describe 'Integration' do
     it 'should list templates' do
       result = templates.get_templates(version)
       puts result
-      template = result.data[0]
 
-      result = templates.get_template_by_id(template.id, nil, version)
+      template_id = 'tem_01de5teh6k59kya8q92mb01qzq'
+      result = templates.get_template_by_id(template_id, "handlebars", version)
       puts result
     end
   end
