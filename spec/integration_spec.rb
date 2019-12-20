@@ -21,7 +21,8 @@ describe 'Integration' do
     it 'should list templates' do
       result = templates.get_templates(version)
       @template = result.data[0]
-      puts result[:data], result.data
+      puts @template
+      puts result
     end
 
     it 'should fetch a template' do
@@ -34,6 +35,7 @@ describe 'Integration' do
     it 'should list drafts' do
       result = drafts.get_drafts(version)
       @draft = result.data[0]
+      puts @draft
       puts result
     end
 
