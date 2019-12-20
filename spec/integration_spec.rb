@@ -23,7 +23,7 @@ describe 'Integration' do
       puts result
       template = result.data[0]
 
-      result = templates.get_template_by_id(template.id, "handlebars", version)
+      result = templates.get_template_by_id(template.id, nil, version)
       puts result
     end
   end
