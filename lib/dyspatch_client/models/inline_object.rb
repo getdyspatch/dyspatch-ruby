@@ -13,56 +13,20 @@ OpenAPI Generator version: 4.2.3-SNAPSHOT
 require 'date'
 
 module DyspatchClient
-  # template draft metadata included latest draft revision
-  class DraftRead
-    # An opaque, unique identifier for a draft
-    attr_accessor :id
-
-    # An opaque, unique identifier for a template
-    attr_accessor :template
-
-    # The name of a draft
+  class InlineObject
     attr_accessor :name
-
-    # The API url for a specific draft
-    attr_accessor :url
-
-    attr_accessor :compiled
-
-    # The time of initial creation
-    attr_accessor :created_at
-
-    # The time of last update
-    attr_accessor :updated_at
-
-    # A list of the Template's available localizations
-    attr_accessor :localizations
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
-        :'template' => :'template',
-        :'name' => :'name',
-        :'url' => :'url',
-        :'compiled' => :'compiled',
-        :'created_at' => :'createdAt',
-        :'updated_at' => :'updatedAt',
-        :'localizations' => :'localizations'
+        :'name' => :'name'
       }
     end
 
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'id' => :'String',
-        :'template' => :'String',
-        :'name' => :'String',
-        :'url' => :'String',
-        :'compiled' => :'CompiledRead',
-        :'created_at' => :'DateTime',
-        :'updated_at' => :'DateTime',
-        :'localizations' => :'Array<LocalizationMetaRead>'
+        :'name' => :'String'
       }
     end
 
@@ -76,49 +40,19 @@ module DyspatchClient
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `DyspatchClient::DraftRead` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `DyspatchClient::InlineObject` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `DyspatchClient::DraftRead`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `DyspatchClient::InlineObject`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
-      end
-
-      if attributes.key?(:'template')
-        self.template = attributes[:'template']
-      end
-
       if attributes.key?(:'name')
         self.name = attributes[:'name']
-      end
-
-      if attributes.key?(:'url')
-        self.url = attributes[:'url']
-      end
-
-      if attributes.key?(:'compiled')
-        self.compiled = attributes[:'compiled']
-      end
-
-      if attributes.key?(:'created_at')
-        self.created_at = attributes[:'created_at']
-      end
-
-      if attributes.key?(:'updated_at')
-        self.updated_at = attributes[:'updated_at']
-      end
-
-      if attributes.key?(:'localizations')
-        if (value = attributes[:'localizations']).is_a?(Array)
-          self.localizations = value
-        end
       end
     end
 
@@ -140,14 +74,7 @@ module DyspatchClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
-          template == o.template &&
-          name == o.name &&
-          url == o.url &&
-          compiled == o.compiled &&
-          created_at == o.created_at &&
-          updated_at == o.updated_at &&
-          localizations == o.localizations
+          name == o.name
     end
 
     # @see the `==` method
@@ -159,7 +86,7 @@ module DyspatchClient
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [id, template, name, url, compiled, created_at, updated_at, localizations].hash
+      [name].hash
     end
 
     # Builds the object from hash
