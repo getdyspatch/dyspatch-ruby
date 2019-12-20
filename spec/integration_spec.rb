@@ -20,13 +20,10 @@ describe 'Integration' do
   describe 'templates' do
     it 'should list templates' do
       result = templates.get_templates(version)
-      @template = result.data[0]
-      puts @template
       puts result
-    end
+      template = result.data[0]
 
-    it 'should fetch a template' do
-      result = templates.get_template_by_id(@template.id, "", version)
+      result = templates.get_template_by_id(template.id, "", version)
       puts result
     end
   end
@@ -34,13 +31,10 @@ describe 'Integration' do
   describe 'drafts' do
     it 'should list drafts' do
       result = drafts.get_drafts(version)
-      @draft = result.data[0]
-      puts @draft
       puts result
-    end
+      draft = result.data[0]
 
-    it 'should fetch a draft' do
-      result = templates.get_draft_by_id(@draft.id, "handlebars", version)
+      result = templates.get_draft_by_id(draft.id, "handlebars", version)
       puts result
     end
   end
