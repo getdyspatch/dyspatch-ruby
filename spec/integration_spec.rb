@@ -6,10 +6,6 @@ version = "application/vnd.dyspatch.2019.10+json"
 describe 'Integration' do
   let(:drafts) { DyspatchClient::DraftsApi.new }
   let(:templates) { DyspatchClient::TemplatesApi.new }
-  before(:all) do
-    @template = nil
-    @draft = nil
-  end
 
   before(:each) do
     # uncomment below to setup host and base_path
