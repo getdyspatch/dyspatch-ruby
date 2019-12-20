@@ -6,6 +6,10 @@ version = "application/vnd.dyspatch.2019.10+json"
 describe 'Integration' do
   let(:drafts) { DyspatchClient::DraftsApi.new }
   let(:templates) { DyspatchClient::TemplatesApi.new }
+  before(:all) do
+    @template = nil
+    @draft = nil
+  end
 
   before(:each) do
     # uncomment below to setup host and base_path
@@ -20,6 +24,25 @@ describe 'Integration' do
   describe 'templates' do
     it 'should list templates' do
       result = templates.get_templates(version)
+      @template = result.data[0]
+      puts result
+    end
+
+    it 'should fetch a template' do
+      result = templates.get_template_by_id(@template.id, "", version)
+      puts result
+    end
+  end
+
+  describe 'drafts' do
+    it 'should list drafts' do
+      result = drafts.get_drafts(version)
+      @draft = result.data[0]
+      puts result
+    end
+
+    it 'should fetch a draft' do
+      result = templates.get_draft_by_id(@draft.id, "handlebars", version)
       puts result
     end
   end
