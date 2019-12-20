@@ -23,7 +23,7 @@ describe 'Integration' do
       puts result
       template = result.data[0]
 
-      result = templates.get_template_by_id(template.id, "", version)
+      result = templates.get_template_by_id(template.id, "handlebars", version)
       puts result
     end
   end
@@ -34,7 +34,7 @@ describe 'Integration' do
       puts result
       draft = result.data[0]
 
-      result = templates.get_draft_by_id(draft.id, "handlebars", version)
+      result = drafts.get_draft_by_id(draft.id, "handlebars", version)
       puts result
     end
   end
