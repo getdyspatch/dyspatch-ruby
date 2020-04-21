@@ -1,7 +1,7 @@
 require 'uri'
 require 'spec_helper'
 
-version = "application/vnd.dyspatch.2019.10+json"
+version = "application/vnd.dyspatch.2020.04+json"
 
 describe 'Integration' do
   let(:drafts) { DyspatchClient::DraftsApi.new }
