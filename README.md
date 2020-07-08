@@ -1,4 +1,4 @@
-# dyspatch_client
+# Dyspatch Ruby API Client
 
 DyspatchClient - the Ruby gem for the Dyspatch API
 
@@ -140,4 +140,3 @@ Class | Method | HTTP request | Description
 - **Type**: API key
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
-
