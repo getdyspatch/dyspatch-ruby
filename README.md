@@ -1,4 +1,4 @@
-# Dyspatch Ruby API Client
+# dyspatch_client
 
 DyspatchClient - the Ruby gem for the Dyspatch API
 
